@@ -1,0 +1,53 @@
+// flex mixins
+@mixin flex-vertical{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-horizontal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin spacing-content{
+  margin-top: 1.5rem;
+}
+// border mixins
+@mixin green-border {
+  border: solid 5px green;
+  border-radius: 150px;
+  @include borderAnimation;
+}
+@mixin green-border-win {
+  border: solid 5px red;
+  border-radius: 150px;
+  @include borderAnimationn;
+}
+@mixin draw-border {
+  border: solid 5px grey;
+  border-radius: 150px;
+  @include borderAnimationnn;
+}
+// border animations
+@mixin borderAnimation {
+  @keyframes border-change{
+    0%{border-color: #adf442;}
+    100%{border-color: #008423;}
+  }
+  animation: border-change 0.3s ;
+}
+@mixin borderAnimationn {
+  @keyframes border-changee{
+    0%{border-color: #d8b543}
+    100%{border-color: #dd1106;}
+  }
+  animation: border-changee 0.3s;
+}
+@mixin borderAnimationnn {
+  @keyframes border-changeee{
+    0%{border-color: #110f10;}
+    100%{border-color: #878485;}
+  }
+  animation: border-changeee 0.3s;
+}

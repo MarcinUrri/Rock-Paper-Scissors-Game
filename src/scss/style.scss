@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+@import 'reset';
+@import "_variables";
+@import "_mixins";
+
+body{
+  background-image: url("http://nsj.org.pl/wp-content/uploads/2014/09/Gradient-Background-34.png");
+  color: $color-text;
+}
+// game border
+.green-border-win{
+  @include green-border-win;
+}
+.green-border{
+  @include green-border;
+}
+.draw-border{
+  @include draw-border;
+}
+// Wrapper
+.wrapper{
+  @include flex-vertical;
+  width: 100%;
+  font-family: 'Julius Sans One', sans-serif;
+  // Top bar
+  .top-bar{
+    width: 60%;
+    @include flex-horizontal;
+    justify-content: space-between;
+    @include spacing-content;
+    .top-bar__stats{
+      @include flex-horizontal;
+      justify-content: space-between;
+      width: 100%;
+      }
+      // player Statistics start
+      .top-bar__info{
+        width: 14rem;
+        height:15rem;
+        border-radius: 5px;
+        background-color: #f4b942;
+        position: absolute;
+        box-shadow: 0px 0px 15px 8px rgba(0,0,0,0.75);
+        bottom: 10%;
+        right: 5%;
+        color: $color-player-info;
+        h2{
+          font-size: 2rem;
+          text-align: center;
+          padding-top: 0.5rem;
+          color: $color-text;
+        }
+        p{
+          font-size: 1.5rem;
+          padding: 0.5rem 0rem 0.5rem 0.5rem;
+          color: $color-text;
+          display: inline-block;
+        }
+        span{
+          font-size: 1.5rem;
+          color: #605642;
+        }
+    }
+    // top-bar player
+    .top-bar__player{
+      width: 100%;
+      text-align: center;
+      font-size: 3rem;
+    }
+  }
+  // choice bar start
+  .choice-bar{
+    @include flex-horizontal;
+    width: 40%;
+    @include spacing-content;
+    justify-content: space-between;
+    // choice bar img
+    img{
+      width:10rem;
+      cursor: pointer;
+      &:hover{
+        opacity: 0.7;
+      }
+    }
+  }
+  // versus bar start
+  .versus-bar{
+    @include flex-horizontal;
+    @include spacing-content;
+    justify-content: space-between;
+    position: relative;
+    width: 50%;
+    display: none;
+    font-size: 10rem;
+    img{
+      width: 15rem;
+    }
+  }
+  // winner bar start
+  .winner-bar{
+    @include spacing-content;
+    display: none;
+    font-size: 5rem;
+  }
+}

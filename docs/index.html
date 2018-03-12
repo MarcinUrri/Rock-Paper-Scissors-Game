@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="utf-8">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <section class="wrapper">
+      <!-- TOP BAR  -->
+      <section class="top-bar">
+        <section class="top-bar__stats">
+          <div class="top-bar__player player">
+              <h1 class="top-bar__name">Player</h1>
+              <span class="top-bar__score">0</span>
+          </div>
+          <div class="top-bar__player computer">
+              <h1 class="top-bar__name">Computer</h1>
+              <span class="top-bar__score">0</span>
+          </div>
+        </section>
+        <!-- PLAYER STATISTICS -->
+        <section class="top-bar__info">
+          <h2>Player Statistics</h2>
+          <p>Title:</p><span class="title"></span>
+          <p>Games played:</p><span class="games-played"></span>
+          <p>Win Ratio:</p><span class="win-ratio"></span>
+        </section>
+      </section>
+      <!-- CHOOSING BAR -->
+      <section class="choice-bar">
+        <img class="choice-img" src="img/rock.png" alt="Rock">
+        <img class="choice-img" src="img/paper.png" alt="Paper">
+        <img class="choice-img" src="img/scissors.png" alt="Scissors">
+      </section>
+      <!-- VERSUS BAR -->
+      <section class="versus-bar">
+        <img class="choosen-img" src="" alt="">
+        <span class="versus-bar__vs">Vs</span>
+        <img class="choosen-img" src="" alt="">
+      </section>
+      <!-- WINNER BAR -->
+      <section class="winner-bar">
+        <h1 class="winner-bar__winner">Player Wins</h1>
+      </section>
+    </section>
+    <script src="js/script.js"></script>
+  </body>
+</html>
