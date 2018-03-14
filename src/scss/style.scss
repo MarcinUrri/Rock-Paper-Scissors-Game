@@ -4,7 +4,7 @@
 @import "_mixins";
 
 body{
-  background-image: url("/img/bg-img.png");
+  background-image: url("../img/bg-img.png");
   color: $color-text;
 }
 // game border
@@ -103,7 +103,7 @@ body{
   }
 }
 // TABLET RESPONISVE
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 .wrapper{
   .top-bar{
     .top-bar__info{
@@ -132,12 +132,12 @@ body{
 }
 }
 // MOBILE RESPONISVE
-@media screen and (max-width: 420px) {
+@media only screen and (max-width: 420px) {
   .wrapper{
     .top-bar{
-      width: 80%;
+      width: 100%;
       .top-bar__player{
-        font-size: 1.5rem;
+        font-size: 2rem;
         width: auto;
       }
     }
