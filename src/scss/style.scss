@@ -4,7 +4,7 @@
 @import "_mixins";
 
 body{
-  background-image: url("http://nsj.org.pl/wp-content/uploads/2014/09/Gradient-Background-34.png");
+  background-image: url("/img/bg-img.png");
   color: $color-text;
 }
 // game border
@@ -24,14 +24,13 @@ body{
   font-family: 'Julius Sans One', sans-serif;
   // Top bar
   .top-bar{
-    width: 60%;
+    width: 80%;
     @include flex-horizontal;
-    justify-content: space-between;
     @include spacing-content;
     .top-bar__stats{
       @include flex-horizontal;
       justify-content: space-between;
-      width: 100%;
+      width: 40rem;
       }
       // player Statistics start
       .top-bar__info{
@@ -76,7 +75,7 @@ body{
     justify-content: space-between;
     // choice bar img
     img{
-      width:10rem;
+      width:20%;
       cursor: pointer;
       &:hover{
         opacity: 0.7;
@@ -93,7 +92,7 @@ body{
     display: none;
     font-size: 10rem;
     img{
-      width: 15rem;
+      width: 30%;
     }
   }
   // winner bar start
@@ -102,4 +101,66 @@ body{
     display: none;
     font-size: 5rem;
   }
+}
+// TABLET RESPONISVE
+@media screen and (max-width: 768px) {
+.wrapper{
+  .top-bar{
+    .top-bar__info{
+      width: auto;
+      height: auto;
+      left: 5%;
+    }
+    .top-bar__player{
+      font-size: 2.5rem;
+    }
+  }
+  .choice-bar{
+    width: 80%;
+  }
+  .versus-bar{
+    width: 90%;
+    font-size: 4rem;
+    img{
+      width: 40%;
+    }
+  }
+  .winner-bar{
+    font-size: 3rem;
+    text-align: center;
+  }
+}
+}
+// MOBILE RESPONISVE
+@media screen and (max-width: 420px) {
+  .wrapper{
+    .top-bar{
+      width: 80%;
+      .top-bar__player{
+        font-size: 1.5rem;
+        width: auto;
+      }
+    }
+    .choice-bar{
+      margin-top: 3rem;
+      width: 80%;
+      img{
+        width: 30%;
+      }
+    }
+    .versus-bar{
+      margin-top: 3rem;
+      width: 90%;
+      font-size:3em;
+      img{
+        width: 40%;
+      }
+    }
+    .winner-bar{
+      font-size: 2rem;
+      margin-top: 3rem;
+    }
+
+  }
+
 }
